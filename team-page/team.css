@@ -364,9 +364,10 @@ display: block;
 /* card hover effect end */
 
 .inner-container img{
-    width: 369px;
-    height: 358px;
-    border-radius: 10px;
+     width: 271px;
+    height: 279px;
+    border-radius: 50%;
+    border: 7px solid white;
 }
 .inner-container{
     display: flex;

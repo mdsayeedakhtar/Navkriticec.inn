@@ -319,7 +319,7 @@ display: block;
     max-width: 1500px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 0fr);
+    grid-template-columns: repeat(4, 0fr);
     gap: 3em 8em;
     padding: 60px 27px;
     background-size:300% 300%;

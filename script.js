@@ -142,26 +142,93 @@ document.querySelectorAll(".rolling-text").forEach(n => n.addEventListener("clic
 
 
 // popup 
-const popup = document.querySelector('.popup');
-const x = document.querySelector('.popup-content i')
+// const popup = document.querySelector('.popup');
+// const x = document.querySelector('.popup-content i')
 
-window.addEventListener('load', () => {
-  popup.classList.add('showPopup');
-  popup.childNodes[1].classList.add('showPopup');
-})
+// window.addEventListener('load', () => {
+//   popup.classList.add('showPopup');
+//   popup.childNodes[1].classList.add('showPopup');
+// })
 
-x.addEventListener('click', () => {
-  popup.classList.remove('showPopup');
-  popup.childNodes[1].classList.add('showPopup');
-})
+// x.addEventListener('click', () => {
+//   popup.classList.remove('showPopup');
+//   popup.childNodes[1].classList.add('showPopup');
+// })
 
 
-let modelBox = document.getElementById("modelBox");
+// let modelBox = document.getElementById("modelBox");
 
-document.onmouseleave = function(){
-  modelBox.style.display = "none";
-}
+// document.onmouseleave = function(){
+//   modelBox.style.display = "none";
+// }
 
-function closeModel(){
-  modelBox.style.display = "none";
-}
+// function closeModel(){
+//   modelBox.style.display = "none";
+// }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  const popupOverlay = document.getElementById('popupOverlay');
+
+  const popup = document.getElementById('popup');
+
+  const closePopup = document.getElementById('closePopup');
+
+  const emailInput = document.getElementById('emailInput');
+
+  // Function to open the popup
+
+  function openPopup() {
+
+      popupOverlay.style.display = 'block';
+
+  }
+
+  // Function to close the popup
+
+  function closePopupFunc() {
+
+      popupOverlay.style.display = 'none';
+
+  }
+
+  // Function to submit the signup form
+
+  function submitForm() {
+
+      const email = emailInput.value;
+
+      // Add your form submission logic here
+
+      console.log(`Email submitted: ${email}`);
+
+      closePopupFunc(); // Close the popup after form submission
+
+  }
+
+  // Event listeners
+
+  // Trigger the popup to open (you can call this function on a button click or any other event)
+
+  openPopup();
+
+  // Close the popup when the close button is clicked
+
+  closePopup.addEventListener('click', closePopupFunc);
+
+  // Close the popup when clicking outside the popup content
+
+  popupOverlay.addEventListener('click', function (event) {
+
+      if (event.target === popupOverlay) {
+
+          closePopupFunc();
+
+      }
+
+  });
+
+  // You can customize and expand these functions based on your specific requirements.
+
+});

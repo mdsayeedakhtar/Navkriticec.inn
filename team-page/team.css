@@ -320,7 +320,7 @@ display: block;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 0fr);
-    gap: 3em 8em;
+    gap: 3em 4em;
     padding: 60px 27px;
     background-size:300% 300%;
     align-items: center;

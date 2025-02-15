@@ -136,3 +136,32 @@ document.querySelectorAll(".rolling-text").forEach(n => n.addEventListener("clic
   hamburger.classList.remove("active");
   mainnav.classList.remove("active");
 }))
+
+
+
+
+
+// popup 
+const popup = document.querySelector('.popup');
+const x = document.querySelector('.popup-content i')
+
+window.addEventListener('load', () => {
+  popup.classList.add('showPopup');
+  popup.childNodes[1].classList.add('showPopup');
+})
+
+x.addEventListener('click', () => {
+  popup.classList.remove('showPopup');
+  popup.childNodes[1].classList.add('showPopup');
+})
+
+
+let modelBox = document.getElementById("modelBox");
+
+document.onmouseleave = function(){
+  modelBox.style.display = "none";
+}
+
+function closeModel(){
+  modelBox.style.display = "none";
+}
